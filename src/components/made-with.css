@@ -1,0 +1,10 @@
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-self: baseline;
+}
