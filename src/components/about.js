@@ -7,7 +7,7 @@ export default class About extends React.Component {
             <div style={{margin: 15}}>
                 <RoundImage picture={this.props.picture}/>
                 <h3>Neil CarlinSchauer</h3>
-                <p>Full Stack Developer. Improvisor. Video Game Designer. Musician. Creative.</p>
+                <p>Full Stack Developer. Improvisor. Creative.</p>
                 <a href="https://www.linkedin.com/in/neilcarlinschauer/">LinkedIn</a>
                 <a href="https://github.com/Zerali">Github</a>
             </div>
