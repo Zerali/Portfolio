@@ -1,0 +1,17 @@
+{
+  "version": 1.0,
+  "Resources": [
+    {
+      "TargetService": {
+        "Type": "AWS::ECS::Service",
+        "Properties": {
+          "TaskDefinition": "arn:aws:ecs:us-east-2:172419990402::task-definition/portfolio-deployment-task:5",
+          "LoadBalancerInfo": {
+            "ContainerName": "portfolio",
+            "ContainerPort": 80
+          }
+        }
+      }
+    }
+  ]
+}
