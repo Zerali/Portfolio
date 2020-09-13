@@ -9,7 +9,15 @@
         "hostPort": 80,
         "protocol": "tcp",
         "containerPort": 80
-      }]
+      }],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+            "awslogs-group": "awslogs-portfolio",
+            "awslogs-region": "us-east-2",
+            "awslogs-stream-prefix": "awslogs-example"
+        }
+      }
     }
   ],
   "requiresCompatibilities": [
