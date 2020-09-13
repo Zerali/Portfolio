@@ -10,7 +10,7 @@
         "protocol": "tcp",
         "containerPort": 80
       }],
-      "entryPoint": ["sh", "-c"],
+      "entryPoint": ["npm", "start"],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
