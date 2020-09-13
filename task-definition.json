@@ -14,9 +14,9 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-            "awslogs-group": "awslogs-portfolio",
+            "awslogs-group": "/ecs/portfolio-deployment-task",
             "awslogs-region": "us-east-2",
-            "awslogs-stream-prefix": "awslogs-example"
+            "awslogs-stream-prefix": "portfolio"
         }
       }
     }
