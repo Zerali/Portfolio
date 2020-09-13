@@ -1,15 +1,17 @@
 {
   "executionRoleArn": "arn:aws:iam::172419990402:role/ecsTaskExecutionRole",
-  "containerDefinitions": [{
-    "name": "portfolio",
-    "image": "172419990402.dkr.ecr.us-east-2.amazonaws.com/neilcarlinschauer/portfolio:a59ced3e097d2fa2226a3031851f740b8e0d434f",
-    "essential": true,
-    "portMappings": [{
-      "hostPort": 80,
-      "protocol": "tcp",
-      "containerPort": 80
-    }]
-  }],
+  "containerDefinitions": [
+    {
+      "name": "portfolio",
+      "image": "<image_name>",
+      "essential": true,
+      "portMappings": [{
+        "hostPort": 80,
+        "protocol": "tcp",
+        "containerPort": 80
+      }]
+    }
+  ],
   "requiresCompatibilities": [
     "FARGATE"
   ],

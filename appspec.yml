@@ -5,7 +5,7 @@
       "TargetService": {
         "Type": "AWS::ECS::Service",
         "Properties": {
-          "TaskDefinition": "arn:aws:ecs:us-east-2:172419990402::task-definition/portfolio-deployment-task:5",
+          "TaskDefinition": <TASK_DEFINITION>,
           "LoadBalancerInfo": {
             "ContainerName": "portfolio",
             "ContainerPort": 80
@@ -15,3 +15,12 @@
     }
   ]
 }
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: <TASK_DEFINITION>
+        LoadBalancerInfo:
+          ContainerName: "sample-website"
+          ContainerPort: 80
