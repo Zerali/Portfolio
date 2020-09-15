@@ -1,4 +1,4 @@
-# pull official base image
+# build environment
 FROM node:13.12.0-alpine
 
 # set working directory
@@ -11,11 +11,15 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY package-lock.json ./
 COPY appspec.yaml ./
-RUN npm install --silent
-RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm ci --silent
 
-# add app
+#add app
 COPY . ./
 
-# start app
-CMD ["npm", "start"]
+RUN npm run build
+
+# production environment
+FROM nginx:1.12-alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
